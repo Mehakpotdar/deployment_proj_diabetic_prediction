@@ -29,9 +29,15 @@ scaled_input = scale.transform(input_data)
 
 if st.sidebar.button('Predict'):
     prediction = model.predict(scaled_input)
-    st.success(f'Prediction for your medical data given: {prediction[0]}')
+    st.success(f'Prediction for your given medical data is : {prediction[0]}')
 
 # if prediction== 0:
 #     st.success('You are NOT DISBETIC')
 # else:
 #     st.success('You are DIABETIC')
+
+## run the file from terminal -- streamlit run stream.py
+## create requirements file
+## goto github and upload the files - model_1, scaled, stream and requierements
+## goto streamlit cloud and connect with github acct
+## goto create app - choose the repo and file that contains the streamlit code(stream.py)
