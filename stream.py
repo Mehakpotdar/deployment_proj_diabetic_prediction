@@ -29,12 +29,14 @@ scaled_input = scale.transform(input_data)
 
 if st.sidebar.button('Predict'):
     prediction = model.predict(scaled_input)
-    st.success(f'Prediction for your given medical data is : {prediction[0]}')
+    if prediction[0] ==0:
+        st.success('You are NOT DISBETIC')
+    else:
+        st.success('You are DIABETIC')
+        
+ #   st.success(f'Prediction for your given medical data is : {prediction[0]}')
 
-# if prediction== 0:
-#     st.success('You are NOT DISBETIC')
-# else:
-#     st.success('You are DIABETIC')
+
 
 ## run the file from terminal -- streamlit run stream.py
 ## create requirements file
